@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virgilio Garden</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #0e0e0e;
+            color: #f0f0f0;
+            scroll-behavior: smooth;
+        }
+
+        /* body {
+  background: url('images/background.jpg') center/cover no-repeat;
+  background-attachment: fixed; /* optional for parallax feel */
+
+
+
+        header {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            color: #d1ffba;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+            margin: 10px 0 30px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 1rem;
+            background: #1f1f1f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #90ee90;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #d1ffba;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 30px;
+        }
+
+        .swiper {
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .contact p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            color: #ddd;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+
+        .contact a:hover {
+            background: #3a5a40;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #588157;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #3a5a40;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1f1f1f;
+            color: #ccc;
+        }
+
+.logo-3d {
+  border-radius: 20px;             /* 👈 round the corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* 👈 3D shadow */
+  transform: scale(1);
+  transition: all 0.3s ease;
+  max-width: 300px;                /* Optional: control size */
+}
+
+/* Optional: subtle hover effect */
+.logo-3d:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+.tagline {
+  font-size: 1.2rem;
+  color: #d1ffba;
+  animation: glowText 3s ease-in-out infinite;
+}
+
+@keyframes glowText {
+  0%, 100% {
+    text-shadow: 0 0 5px #a4ffa0, 0 0 10px #88cc8c;
+  }
+  50% {
+    text-shadow: 0 0 10px #ccffcc, 0 0 20px #aaffaa;
+  }
+}
+
+.section-description {
+  padding: 20px 20px 30px;
+  display: block;
+  color: #d8f3dc;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+
+/* Reveal animation when visible */
+.section-description {
+  color: #d8f3dc; /* light green */
+}
+
+/*video description*/
+.intro-section {
+  background-color: #1b5e20; /* deep green */
+  padding: 60px 20px;
+  color: white;
+}
+
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-video {
+  flex: 1 1 500px;
+  min-width: 300px;
+}
+
+.intro-text {
+  flex: 1 1 500px;
+  min-width: 300px;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-light {
+  background-color: #fefae0;
+  color: #1b5e20;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-light:hover {
+  background-color: #dcedc8;
+}
+
+.btn-wrapper{
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <!--<h1>Virgilio Garden</h1>-->
+        <p><img src="images/background.jpg" alt="Virgilio Garden" height="300" class="logo-3d"></p>
+        <p class="tagline">Diseño y mantenimiento de jardines con alma natural.</p>
+        <p>Telefono: 56456456 564</p>
+
+
+    </header>
+
+    <nav>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+        
+    </nav>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--video description-->
+    <section class="intro-section">
+  <div class="intro-container">
+    <div class="intro-video">
+      <iframe width="600" height="404" src="https://www.youtube.com/embed/0JnGiu5ffMs" title="Outdoor Furniture in a Luxury Home Patio Free Stock Footage | No Copyright Videos | Creative Common" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="intro-text">
+      <h2>Conoce a Nuestro Equipo</h2>
+      <p class="section-description">
+        En Virgilio Garden, combinamos diseño, ingeniería y jardinería para ofrecer espacios exteriores únicos.
+        Nuestro equipo cuenta con experiencia nacional e internacional en paisajismo, riego automatizado y soluciones sostenibles.
+      </p>
+      <div class="btn-wrapper">
+      <a href="#contacto"  class="btn-light">Contáctanos </a>
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="trabajos">
+        <h2>Nuestros Trabajos</h2>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/garden1.jpg" alt="Trabajo 1"></div>
+                <div class="swiper-slide"><img src="images/garden2.jpg" alt="Trabajo 2"></div>
+                <div class="swiper-slide"><img src="images/garden3.jpg" alt="Trabajo 3"></div>
+                <div class="swiper-slide"><img src="images/garden4.webp" alt="Trabajo 4"></div>
+                <div class="swiper-slide"><img src="images/garden5.jpg" alt="Trabajo 5"></div>
+                <div class="swiper-slide"><img src="images/garden6.webp" alt="Trabajo 6"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Trabajo 3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <p class="section-description">Descubre algunos de los espacios verdes que hemos creado y cuidado para nuestros clientes. Cada proyecto refleja nuestro compromiso con la calidad, el diseno natural y la stisfaccion de quienes confian en nosotros</p>
+    </section>
+
+    <section id="proyectos">
+        <h2>Cesped Artificial</h2>
+        <p style="text-align:center;">Espacios verdes personalizados para hogares, empresas y zonas urbanas.</p>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/cesped.jpg" alt="cesped"></div>
+                <div class="swiper-slide"><img src="images/cesped1.jpg" alt="cesped1"></div>
+                <div class="swiper-slide"><img src="images/cesped 2.jpg" alt="cesped2"></div>
+                <div class="swiper-slide"><img src="images/cesped3.jpg" alt="cesped3"></div>
+                <div class="swiper-slide"><img src="images/cesped4.jpg" alt="cesped4"></div>
+                <div class="swiper-slide"><img src="images/cesped5.jpg" alt="cesped5"></div>
+                <div class="swiper-slide"><img src="images/cesped6.jpg" alt="cesped6"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <p class="section-description">Soluciones profecionales en cesped artificial con instalacion tecnica, drenaje eficiente y diseno adaptado a todo tipo de espacios exteriores.</p>
+    </section>
+
+     <section id="proyectos">
+        <h2>Diseno de plantacion & Patios</h2>
+        <p style="text-align:center;">Espacios verdes personalizados para hogares, empresas y zonas urbanas.</p>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/patio.jpg" alt="patio"></div>
+                <div class="swiper-slide"><img src="images/`patio1.jpg" alt="patio1"></div>
+                <div class="swiper-slide"><img src="images/patio2.jpg" alt="patio2"></div>
+                <div class="swiper-slide"><img src="images/patio3.jpg" alt="patio3"></div>
+                <div class="swiper-slide"><img src="images/patio4.jpg" alt="patio4"></div>
+                <div class="swiper-slide"><img src="images/patio5.jpg" alt="patio5"></div>
+                <div class="swiper-slide"><img src="images/patio6.jpg" alt="patio6"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <p class="section-description">Diseno de patios y jardines residenciales con seleccion de plantas, riego automatico, iluminacion ambiental y mobiliario exterior funcional. Todo adaptado al estilo de tu hogar.</p>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <img src="images/insta.png" alt="inta" width="40" height="40">
+        <img src="images/face.png" alt="inta" width="40" height="40">
+        <img src="images/twiter.png" alt="inta" width="40" height="40">
+        <p>¿Te gustaría transformar tu jardín?</p>
+        <a href="mailto:virgilio@example.com" class="btn">Escríbenos</a>
+    </section>
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Virgilio Garden. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 30,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            autoplay: {
+                delay: 800, /*Carrusell sped*/
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
